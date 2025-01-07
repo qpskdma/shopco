@@ -2,4 +2,39 @@
   background-color: #f0eeed;
   border-radius: 20px;
   max-width: 295px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+.rating {
+  width: 180px;
+  margin-bottom: 8px;
+}
+
+.price {
+  color: var(--color-dark);
+  font-weight: 700;
+  display: inline;
+  span {
+    margin-right: 10px;
+  }
+}
+
+.old__price {
+  color: #00000066;
+  &:first-child {
+    text-decoration: line-through;
+  }
+}
+
+.sale {
+  color: var(--color-red);
+  background: #ff33331a;
+  border-radius: var(--border-radius);
+  font-size: 12px;
+  padding: 6px 14px;
 }
