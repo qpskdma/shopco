@@ -145,6 +145,8 @@ button {
   border: none;
   outline: none;
   font-weight: 500;
+  cursor: pointer;
+  display: inline;
 }
 
 .dark-button {
@@ -162,4 +164,11 @@ button {
   border: 1px solid var(--color-gray-light);
   border-radius: var(--border-radius);
   padding: 15px 67px;
+}
+
+h3 {
+  font-family: "Integral CF";
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
 }

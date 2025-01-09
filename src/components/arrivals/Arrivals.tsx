@@ -8,6 +8,8 @@ import { getProducts } from "@/services/firebase";
 
 const Arrivals: React.FC = ({}) => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [isArrivalsVisible, setIsArrivalsVisible] = useState(false);
+  const [isTopVisible, setIsTopVisible] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -25,13 +27,22 @@ const Arrivals: React.FC = ({}) => {
         <div className={styles.products__wrapper}>
           {products.length > 0 ? (
             products.map((item: Product, index: number) => {
-              return <ProductItem item={item} key={index} />;
+              return (
+                <div className={isArrivalsVisible ? styles.visible : ""}>
+                  <ProductItem item={item} key={index} />
+                </div>
+              );
             })
           ) : (
             <ProductItem />
           )}
         </div>
-        <button className="light-button">View All</button>
+        <button
+          className={`light-button ${styles.btn}`}
+          onClick={() => setIsArrivalsVisible(!isArrivalsVisible)}
+        >
+          View All
+        </button>
         <div className={styles.horizontal__line}></div>
       </div>
       <div className={styles.wrapper}>

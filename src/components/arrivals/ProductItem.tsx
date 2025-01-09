@@ -7,7 +7,7 @@ interface ProductItemProps {
 
 const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
   return (
-    <div>
+    <>
       <div className={styles.image__wrapper}>
         <img
           height={"298"}
@@ -15,7 +15,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
           alt="T-SHIRT WITH TAPE DETAILS"
         />
       </div>
-      <h3 className={styles.title}>{item?.name}</h3>
+      <h2 className={styles.title}>{item?.name}</h2>
       <div className={styles.rating}>
         <div className={styles.star__rating}></div>
         <div className={styles.number__rating}>{item?.rating}/5</div>
@@ -31,7 +31,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
           ) : null}
         </span>
       </div>
-    </div>
+    </>
   );
 };
 

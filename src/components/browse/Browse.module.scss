@@ -1,0 +1,32 @@
+.wrapper {
+  background-color: var(--color-gray-light);
+  width: 90vw;
+  margin: 0 auto;
+  border-radius: 40px;
+  min-height: 866px;
+  padding: 70px 64px;
+  h3 {
+    margin-bottom: 64px;
+  }
+}
+
+.dress__styles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 6px;
+  div {
+    position: relative;
+  }
+  img {
+  }
+  p {
+    position: absolute;
+    color: var(--color-dark);
+    font-size: 36px;
+    font-weight: 700;
+    top: 6.14%;
+    left: 36px;
+  }
+}

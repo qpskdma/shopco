@@ -2,8 +2,11 @@
   position: relative;
   background-color: var(--background-gray);
   background: url(../../public/images/models.png);
+  background-position: center;
   height: 663px;
-  padding: 100px;
+  padding: 0 9.43%;
+  display: flex;
+  flex-direction: row;
 }
 
 .text__section {
@@ -15,12 +18,17 @@
     font-family: "Integral CF";
     font-size: 64px;
     color: var(--color-dark);
-    line-height: 64px;
+    line-height: 100%;
+    margin-top: 103px;
   }
 }
 
 .image__section {
-  img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .first__star,
+  .second__star {
     position: absolute;
     z-index: 10;
   }
@@ -28,12 +36,12 @@
 
 .first__star {
   top: 297px;
-  left: 750px;
+  left: 10%;
 }
 
 .second__star {
   top: 86px;
-  left: 1255px;
+  left: 82.62%;
   width: 104px;
 }
 
@@ -65,4 +73,35 @@
   justify-content: center;
   align-items: center;
   column-gap: 106px;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4.1%;
+    height: 853px;
+    background: var(--background-gray);
+  }
+  .text__section {
+    row-gap: 20px;
+    h3 {
+      font-size: 36px;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .image__section {
+    background: url(../../public/images/models.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .metrics__value {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
 }
