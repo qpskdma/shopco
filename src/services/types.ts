@@ -12,3 +12,10 @@ export interface Product {
   sale?: number;
   oldPrice?: number;
 }
+
+export interface Review {
+  rating: number;
+  author: string;
+  isAuthorConfirmed: boolean;
+  text: string;
+}

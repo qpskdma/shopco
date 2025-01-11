@@ -11,14 +11,14 @@ const Arrivals: React.FC = ({}) => {
   const [isArrivalsVisible, setIsArrivalsVisible] = useState(false);
   const [isTopVisible, setIsTopVisible] = useState(false);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const productsList: Product[] = await getProducts();
-      setProducts(productsList);
-    };
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     const productsList: Product[] = await getProducts();
+  //     setProducts(productsList);
+  //   };
 
-    fetchProducts();
-  }, []);
+  //   fetchProducts();
+  // }, []);
 
   return (
     <>

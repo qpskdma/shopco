@@ -1,8 +1,9 @@
 .wrapper {
   position: relative;
-  background-color: var(--background-gray);
   background: url(../../public/images/models.png);
+  background-color: var(--background-gray);
   background-position: center;
+  background-repeat: no-repeat;
   height: 663px;
   padding: 0 9.43%;
   display: flex;
@@ -17,7 +18,7 @@
   h3 {
     font-family: "Integral CF";
     font-size: 64px;
-    color: var(--color-dark);
+    color: var(--dark);
     line-height: 100%;
     margin-top: 103px;
   }
@@ -60,14 +61,14 @@
 }
 
 .metrics__value {
-  color: var(--color-dark);
+  color: var(--dark);
   font-size: 40px;
   font-weight: 700;
 }
 
 .partners {
   height: 122px;
-  background-color: var(--color-dark);
+  background-color: var(--dark);
   display: flex;
   flex-direction: row;
   justify-content: center;
