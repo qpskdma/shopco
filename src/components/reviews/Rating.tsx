@@ -34,7 +34,7 @@ const Rating: React.FC<RatingProps> = ({ rating }) => {
     );
   }
 
-  return <div className={styles.rating}>{stars}</div>;
+  return <div style={{ marginTop: "-5px" }}>{stars}</div>;
 };
 
 export default Rating;

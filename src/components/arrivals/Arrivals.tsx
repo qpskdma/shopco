@@ -8,43 +8,93 @@ import { getProducts } from "@/services/firebase";
 
 const Arrivals: React.FC = ({}) => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [isArrivalsVisible, setIsArrivalsVisible] = useState(false);
-  const [isTopVisible, setIsTopVisible] = useState(false);
+  const [offset, setOffset] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     const productsList: Product[] = await getProducts();
-  //     setProducts(productsList);
-  //   };
+  const scrollRight = () => {
+    if (currentIndex < products.length - 1) {
+      setOffset((prevOffset) => prevOffset - (20.5 / 100) * window.innerWidth);
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    } else {
+      setOffset(0);
+      setCurrentIndex(0);
+    }
+  };
 
-  //   fetchProducts();
-  // }, []);
+  const scrollLeft = () => {
+    if (currentIndex > 0) {
+      setOffset((prevOffset) => prevOffset + (20.5 / 100) * window.innerWidth);
+      setCurrentIndex((prevIndex) => prevIndex - 1);
+    } else {
+      setOffset(-(20.5 / 100) * window.innerWidth * (products.length - 1));
+      setCurrentIndex(products.length - 1);
+    }
+  };
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const productsList: Product[] = await getProducts();
+      setProducts(productsList);
+      console.log(productsList);
+    };
+
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setOffset(-(20.5 / 100) * window.innerWidth * currentIndex);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [currentIndex]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setOffset(-(20.5 / 100) * window.innerWidth * currentIndex);
+    }
+  }, [currentIndex]);
 
   return (
     <>
       <div className={styles.wrapper}>
         <h3 className={styles.title}>NEW ARRIVALS</h3>
-        <div className={styles.products__wrapper}>
+        {products.length > 0 ? (
+          <>
+            <button className={styles.btnLeft} onClick={scrollLeft}>
+              ❮
+            </button>
+            <button className={styles.btnRight} onClick={scrollRight}>
+              ❯
+            </button>
+          </>
+        ) : null}
+        <div
+          className={styles.products__wrapper}
+          style={{ transform: `translateX(${offset}px)` }}
+        >
           {products.length > 0 ? (
-            products.map((item: Product, index: number) => {
-              return (
-                <div className={isArrivalsVisible ? styles.visible : ""}>
-                  <ProductItem item={item} key={index} />
-                </div>
-              );
-            })
+            [...products, ...products, ...products].map(
+              (item: Product, index: number) => {
+                return (
+                  <div className={styles.item} key={index}>
+                    <ProductItem item={item} isLoading={false} />
+                  </div>
+                );
+              }
+            )
           ) : (
-            <ProductItem />
+            <div className={styles.item}>
+              <ProductItem isLoading={true} />
+            </div>
           )}
         </div>
-        <button
-          className={`light-button ${styles.btn}`}
-          onClick={() => setIsArrivalsVisible(!isArrivalsVisible)}
-        >
-          View All
-        </button>
-        <div className={styles.horizontal__line}></div>
+        <button className={`light-button ${styles.btn}`}>View All</button>
       </div>
+      <div className={styles.horizontal__line}></div>
       <div className={styles.wrapper}>
         <h3 className={styles.title}>top selling</h3>
       </div>

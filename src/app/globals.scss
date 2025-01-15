@@ -164,6 +164,9 @@ button {
   border: 1px solid var(--gray-light);
   border-radius: var(--border-radius);
   padding: 15px 67px;
+  &:hover {
+    background-color: rgba(240, 240, 240, 1);
+  }
 }
 
 h3 {
