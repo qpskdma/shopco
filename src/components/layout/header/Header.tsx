@@ -9,7 +9,7 @@ const Header: React.FC = ({}) => {
         <div className={styles.line2}></div>
         <div className={styles.line3}></div>
       </div>
-      <h1 className={styles.logo}>SHOP.CO</h1>
+      <h1 className="logo">SHOP.CO</h1>
       <ul className={styles.menu}>
         <li>
           <div className={styles.dropdown}>
@@ -26,9 +26,13 @@ const Header: React.FC = ({}) => {
           <Link href="#">Brands</Link>
         </li>
       </ul>
-      <div className={styles.search}>
+      <div className={`custom-input__wrapper ${styles.search}`}>
         <img src="/icons/loupe.svg" alt="loupe" />
-        <input type="text" placeholder="Search for products..." />
+        <input
+          className="custom-input"
+          type="text"
+          placeholder="Search for products..."
+        />
       </div>
       <div className={styles.menu__icons}>
         <img className={styles.loupe} src="/icons/loupe.svg" alt="loupe" />

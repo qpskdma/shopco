@@ -1,5 +1,4 @@
 "use client";
-
 import { Product } from "@/services/types";
 import styles from "./Arrivals.module.scss";
 import ProductItem from "./ProductItem";
@@ -31,15 +30,15 @@ const Arrivals: React.FC = ({}) => {
     }
   };
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const productsList: Product[] = await getProducts();
-      setProducts(productsList);
-      console.log(productsList);
-    };
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     const productsList: Product[] = await getProducts();
+  //     setProducts(productsList);
+  //     console.log(productsList);
+  //   };
 
-    fetchProducts();
-  }, []);
+  //   fetchProducts();
+  // }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -94,7 +93,7 @@ const Arrivals: React.FC = ({}) => {
         </div>
         <button className={`light-button ${styles.btn}`}>View All</button>
       </div>
-      <div className={styles.horizontal__line}></div>
+      <div className="horizontal-line"></div>
       <div className={styles.wrapper}>
         <h3 className={styles.title}>top selling</h3>
       </div>

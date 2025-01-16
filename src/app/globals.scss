@@ -1,6 +1,7 @@
 :root {
   --foreground: #171717;
   --background-gray: #f2f0f1;
+  --background-gray-2: #0000001a;
   --dark: #000000;
   --light: #ffffff;
   --gray: rgba(0, 0, 0, 0.6);
@@ -8,6 +9,8 @@
   --red: #ff3333;
 
   --border-radius: 62px;
+
+  --padding-side: 9.43%;
 }
 
 @media (prefers-color-scheme: light) {
@@ -38,6 +41,26 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  font-size: 1rem;
 }
 
 a {
@@ -175,3 +198,47 @@ h3 {
   text-transform: uppercase;
   text-align: center;
 }
+
+.custom-input__wrapper {
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--light);
+  border-radius: var(--border-radius);
+  img {
+    margin: 0 12px;
+  }
+}
+
+.custom-input {
+  width: 100%;
+  height: 45px;
+  background-color: var(--light);
+  outline: none;
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--dark);
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #0000001a;
+}
+
+.logo {
+  color: var(--dark);
+  font-family: "Integral CF";
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+* {
+  transition: 0.25s;
+}
+
+// @media (max-width: 748px) {
+//   .custom-input__wrapper {
+//     padding-left: 52px;
+//   }
+// }
