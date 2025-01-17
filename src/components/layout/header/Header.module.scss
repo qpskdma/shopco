@@ -2,9 +2,14 @@
   display: flex;
   flex-direction: row;
   column-gap: 40px;
-  padding: 24px var(--padding-side);
   align-items: center;
   justify-content: space-between;
+  padding: 24px var(--padding-side);
+  // position: fixed;
+  // transition: transform 0.3s ease-in-out;
+  top: 0;
+  z-index: 100000;
+  background-color: var(--background-color);
 }
 
 .burger__menu {
@@ -17,7 +22,7 @@
 .burger__menu div {
   width: 30px;
   height: 4px;
-  background-color: var(--dark);
+  background-color: var(--text-color);
   border-radius: 2px;
   position: absolute;
 }
@@ -40,7 +45,7 @@
   display: flex;
   flex-direction: row;
   column-gap: 24px;
-  color: var(--dark);
+  color: var(--text-color);
   li {
     text-wrap: nowrap;
     cursor: pointer;
@@ -52,18 +57,12 @@
 }
 
 .search {
-  position: relative;
   width: 577px;
   min-width: 212px;
   background-color: var(--background-gray);
   display: flex;
   justify-content: right;
-  padding-left: 52px;
   img {
-    position: absolute;
-    z-index: 10;
-    top: 12px;
-    left: 16px;
     opacity: 0.4;
   }
   input {
@@ -77,13 +76,24 @@
   column-gap: 14px;
   cursor: pointer;
   min-width: 60px;
+  img {
+    min-width: 24px;
+  }
 }
 
 .loupe {
   display: none;
 }
 
-@media (max-width: 900px) {
+.visible {
+  transform: translateY(0);
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+@media (max-width: 1050px) {
   .search {
     display: none;
   }

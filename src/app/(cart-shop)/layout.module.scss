@@ -1,0 +1,13 @@
+.wrapper {
+  padding: 0 var(--padding-side);
+}
+
+.horizontalLine {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 848px) {
+  .horizontalLine {
+    margin-bottom: 20px;
+  }
+}

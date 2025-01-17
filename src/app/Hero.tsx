@@ -35,11 +35,36 @@ const Hero: React.FC = ({}) => {
       </div>
 
       <div className={styles.partners}>
-        <img height={"33"} src="/icons/versace.svg" alt="versace" />
-        <img height={"38"} src="/icons/zara-logo.svg" alt="zara" />
-        <img height={"36"} src="/icons/gucci-logo.svg" alt="gucci" />
-        <img height={"32"} src="/icons/prada-logo.svg" alt="prada" />
-        <img height={"33"} src="/icons/calvin-clein.svg" alt="calvin clein" />
+        <img
+          className="icon"
+          height={"33"}
+          src="/icons/versace.svg"
+          alt="versace"
+        />
+        <img
+          className="icon"
+          height={"38"}
+          src="/icons/zara-logo.svg"
+          alt="zara"
+        />
+        <img
+          className="icon"
+          height={"36"}
+          src="/icons/gucci-logo.svg"
+          alt="gucci"
+        />
+        <img
+          className="icon"
+          height={"32"}
+          src="/icons/prada-logo.svg"
+          alt="prada"
+        />
+        <img
+          className="icon"
+          height={"33"}
+          src="/icons/calvin-clein.svg"
+          alt="calvin clein"
+        />
       </div>
     </>
   );

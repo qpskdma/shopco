@@ -32,25 +32,45 @@ const Footer: React.FC<FooterProps> = ({}) => {
               wear. From women to men.
             </p>
           </div>
-          <ul className={styles.socials}>
+          <ul className={`icon ${styles.socials}`}>
             <li>
               <a className={styles.socialWrapper} href="#">
-                <img width={12} src="/icons/logo-twitter.svg" alt="twitter" />
+                <img
+                  className="icon"
+                  width={12}
+                  src="/icons/logo-twitter.svg"
+                  alt="twitter"
+                />
               </a>
             </li>
             <li>
               <a className={styles.socialWrapper} href="#">
-                <img height={12} src="/icons/logo-facebook.svg" alt="twitter" />
+                <img
+                  className="icon"
+                  height={12}
+                  src="/icons/logo-facebook.svg"
+                  alt="twitter"
+                />
               </a>
             </li>
             <li>
               <a className={styles.socialWrapper} href="#">
-                <img width={12} src="/icons/logo-inst.svg" alt="twitter" />
+                <img
+                  className="icon"
+                  width={12}
+                  src="/icons/logo-inst.svg"
+                  alt="twitter"
+                />
               </a>
             </li>
             <li>
               <a className={styles.socialWrapper} href="#">
-                <img width={12} src="/icons/logo-github.svg" alt="twitter" />
+                <img
+                  className="icon"
+                  width={12}
+                  src="/icons/logo-github.svg"
+                  alt="twitter"
+                />
               </a>
             </li>
           </ul>

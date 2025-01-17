@@ -8,6 +8,7 @@
   padding: 0 var(--padding-side);
   display: flex;
   flex-direction: row;
+  color: black;
 }
 
 .text__section {
@@ -18,7 +19,7 @@
   h3 {
     font-family: "Integral CF";
     font-size: 64px;
-    color: var(--dark);
+    color: black;
     line-height: 100%;
     margin-top: 103px;
   }
@@ -61,14 +62,13 @@
 }
 
 .metrics__value {
-  color: var(--dark);
   font-size: 40px;
   font-weight: 700;
 }
 
 .partners {
   height: 122px;
-  background-color: var(--dark);
+  background-color: var(--text-color);
   display: flex;
   flex-direction: row;
   justify-content: center;

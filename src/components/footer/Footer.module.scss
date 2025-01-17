@@ -18,7 +18,7 @@
   position: absolute;
   width: 86.11%;
   min-height: 180px;
-  background-color: var(--dark);
+  background-color: var(--text-color);
   border-radius: 20px;
   top: 0;
   left: 50%;
@@ -27,7 +27,7 @@
   flex-direction: row;
   padding: 36px 64px;
   .title {
-    color: var(--light);
+    color: var(--background-color);
     font-family: "Integral CF";
     font-size: 40px;
     line-height: 100%;
@@ -70,7 +70,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--light);
+  background-color: var(--background-color);
   border-radius: 50%;
   border: 1px solid #00000033;
   &:hover {
