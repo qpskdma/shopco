@@ -7,7 +7,7 @@ interface RatingProps {
 const Rating: React.FC<RatingProps> = ({ rating }) => {
   const stars = [];
   const fullStars = Math.floor(rating);
-  const hasHalfStar: Boolean = rating - fullStars >= 0.5;
+  const hasHalfStar: boolean = rating - fullStars >= 0.5;
   const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
   for (let i = 0; i < fullStars; i++) {

@@ -1,8 +1,4 @@
-import styles from "./ProductPage.module.scss";
-
-interface ProductPageProps {}
-
-const ProductPage: React.FC<ProductPageProps> = ({}) => {
+const ProductPage: React.FC = ({}) => {
   return <div>ProductPage</div>;
 };
 

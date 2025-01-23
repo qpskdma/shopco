@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from "./Filters.module.scss";
-import RangeSlider from "./RangeSlider";
 
 const Filters: React.FC = ({}) => {
   return (
@@ -34,7 +33,6 @@ const Filters: React.FC = ({}) => {
           <div className={`${styles.flexRow} ${styles.title}`}>
             <h2>Price</h2>
           </div>
-          <RangeSlider /> 
         </div> */}
         <div className={`horizontal-line ${styles.horizontalLine}`}></div>
         <div>
