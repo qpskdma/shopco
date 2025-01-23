@@ -1,8 +1,6 @@
 import styles from "./Cart.module.scss";
 
-interface CartProps {}
-
-const Cart: React.FC<CartProps> = ({}) => {
+const Cart: React.FC = ({}) => {
   return (
     <>
       <h3 className={styles.title}>NEW ARRIVALS</h3>

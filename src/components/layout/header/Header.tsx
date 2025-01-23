@@ -1,10 +1,10 @@
 "use client";
 import styles from "./Header.module.scss";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+// import { useEffect, useState } from "react";
 
 const Header: React.FC = ({}) => {
-  const [theme, setTheme] = useState("light");
+  // const [theme, setTheme] = useState("light");
 
   // const [isVisible, setIsVisible] = useState(true);
   // const prevScrollPos = useRef(0);
@@ -23,20 +23,20 @@ const Header: React.FC = ({}) => {
   //   return () => window.removeEventListener("scroll", handleScroll);
   // }, []);
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const savedTheme = localStorage.getItem("theme");
+  //   if (savedTheme) {
+  //     setTheme(savedTheme);
+  //     document.documentElement.setAttribute("data-theme", savedTheme);
+  //   }
+  // }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-  };
+  // const toggleTheme = () => {
+  //   const newTheme = theme === "light" ? "dark" : "light";
+  //   setTheme(newTheme);
+  //   localStorage.setItem("theme", newTheme);
+  //   document.documentElement.setAttribute("data-theme", newTheme);
+  // };
 
   return (
     <header className={styles.header}>

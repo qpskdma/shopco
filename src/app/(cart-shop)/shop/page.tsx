@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { getNewArrivalProducts, getOnSaleProducts } from "@/services/firebase";
 import { Product } from "@/services/types";
+import { Suspense } from "react";
 import ProductItem from "@/components/productItem/ProductItem";
 import styles from "./page.module.scss";
 
@@ -29,22 +30,24 @@ const ProductsPage = () => {
 
   return (
     <div className={styles.container}>
-      <h1>{category === "onSale" ? "On Sale" : "New Arrivals"}</h1>
-      <div className={styles.productsWrapper}>
-        {products.length > 0 ? (
-          products.map((item: Product, index: number) => {
-            return (
-              <div className={styles.item} key={index}>
-                <ProductItem item={item} isLoading={false} />
-              </div>
-            );
-          })
-        ) : (
-          <div className={`${styles.item} ${styles.overflow}`}>
-            <ProductItem isLoading={true} />
-          </div>
-        )}
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <h1>{category === "onSale" ? "On Sale" : "New Arrivals"}</h1>
+        <div className={styles.productsWrapper}>
+          {products.length > 0 ? (
+            products.map((item: Product, index: number) => {
+              return (
+                <div className={styles.item} key={index}>
+                  <ProductItem item={item} isLoading={false} />
+                </div>
+              );
+            })
+          ) : (
+            <div className={`${styles.item} ${styles.overflow}`}>
+              <ProductItem isLoading={true} />
+            </div>
+          )}
+        </div>
+      </Suspense>
     </div>
   );
 };
