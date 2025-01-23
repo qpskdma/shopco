@@ -4,7 +4,7 @@ import Rating from "../reviews/Rating";
 
 interface ProductItemProps {
   item?: Product;
-  isLoading: Boolean;
+  isLoading: boolean;
 }
 
 const ProductItem: React.FC<ProductItemProps> = ({ item, isLoading }) => {

@@ -1,4 +1,6 @@
+"use client";
 import styles from "./layout.module.scss";
+import { Suspense } from "react";
 
 export default function RootLayout({
   children,
@@ -8,7 +10,7 @@ export default function RootLayout({
   return (
     <div className={styles.wrapper}>
       <div className={`horizontal-line ${styles.horizontalLine}`}></div>
-      {children}
+      <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
     </div>
   );
 }

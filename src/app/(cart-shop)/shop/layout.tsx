@@ -1,6 +1,7 @@
 "use client";
 import Filters from "@/components/filters/Filters";
 import styles from "./page.module.scss";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
@@ -23,20 +24,22 @@ export default function RootLayout({
     <div className={styles.mainWrapper}>
       <nav aria-label="breadcrumb">
         <ol className={styles.breadcrumb}>
-          {crumbs.map((crumb, index) => (
-            <li
-              key={index}
-              className={`${styles.breadcrumbItem} ${
-                index === crumbs.length - 1 ? "active" : ""
-              }`}
-            >
-              {index === crumbs.length - 1 ? (
-                crumb.label
-              ) : (
-                <Link href={crumb.href}>{crumb.label}</Link>
-              )}
-            </li>
-          ))}
+          <Suspense fallback={<div>Loading...</div>}>
+            {crumbs.map((crumb, index) => (
+              <li
+                key={index}
+                className={`${styles.breadcrumbItem} ${
+                  index === crumbs.length - 1 ? "active" : ""
+                }`}
+              >
+                {index === crumbs.length - 1 ? (
+                  crumb.label
+                ) : (
+                  <Link href={crumb.href}>{crumb.label}</Link>
+                )}
+              </li>
+            ))}
+          </Suspense>
         </ol>
       </nav>
       <div className={styles.wrapper}>

@@ -1,8 +1,6 @@
 import styles from "./Footer.module.scss";
 
-interface FooterProps {}
-
-const Footer: React.FC<FooterProps> = ({}) => {
+const Footer: React.FC = ({}) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.contactFormWrapper}>
