@@ -1,9 +1,10 @@
 "use client";
 import { Product } from "@/services/types";
 import styles from "./Arrivals.module.scss";
-import ProductItem from "./ProductItem";
 import { useEffect, useState } from "react";
 import { getProducts } from "@/services/firebase";
+import ProductItem from "../productItem/ProductItem";
+import Link from "next/link";
 
 const Arrivals: React.FC = ({}) => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -30,15 +31,15 @@ const Arrivals: React.FC = ({}) => {
     }
   };
 
-  // useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     const productsList: Product[] = await getProducts();
-  //     setProducts(productsList);
-  //     console.log(productsList);
-  //   };
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const productsList: Product[] = await getProducts();
+      setProducts(productsList);
+      console.log(productsList);
+    };
 
-  //   fetchProducts();
-  // }, []);
+    fetchProducts();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -91,7 +92,9 @@ const Arrivals: React.FC = ({}) => {
             </div>
           )}
         </div>
-        <button className={`light-button ${styles.btn}`}>View All</button>
+        <Link href="/shop?category=newArrivals">
+          <button className={`light-button ${styles.btn}`}>View All</button>
+        </Link>
       </div>
       <div className="horizontal-line"></div>
       <div className={styles.wrapper}>

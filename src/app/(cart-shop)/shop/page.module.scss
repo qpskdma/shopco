@@ -1,0 +1,40 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  margin-bottom: 27px;
+  .breadcrumbItem:not(:last-child)::after {
+    content: url("../../../../public/icons/arrow-right.svg");
+    margin-left: 10px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 0 20px;
+}
+
+.productsWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.overflow {
+  width: 825px;
+  // overflow: hidden;
+}

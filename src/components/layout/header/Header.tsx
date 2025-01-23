@@ -57,19 +57,23 @@ const Header: React.FC = ({}) => {
       <ul className={styles.menu}>
         <li>
           <Link href="/shop">
-            <div className={styles.dropdown}>
-              Shop <img className="icon" src="/icons/arrow-down.svg" alt="" />
-            </div>
+            <div className="link">Shop</div>
           </Link>
         </li>
         <li>
-          <Link href="#">On Sale</Link>
+          <Link className="link" href="/shop?category=onSale">
+            On Sale
+          </Link>
         </li>
         <li>
-          <Link href="#">New Arrivals</Link>
+          <Link className="link" href="/shop?category=newArrivals">
+            New Arrivals
+          </Link>
         </li>
         <li>
-          <Link href="#">Brands</Link>
+          <Link className="link" href="#">
+            Brands
+          </Link>
         </li>
       </ul>
       <div className={`custom-input__wrapper ${styles.search}`}>
@@ -82,13 +86,16 @@ const Header: React.FC = ({}) => {
       </div>
       <div className={`icon ${styles.menu__icons}`}>
         <img className={styles.loupe} src="/icons/loupe.svg" alt="loupe" />
-        <Link href={"/cart"}>
+        <Link href={"/"}>
+          {/* <Link href={"/cart"}> */}
           <img height={"24"} src="/icons/cart.svg" alt="cart" />
         </Link>
-        <Link href={"/lk"}>
+        <Link href={"/"}>
+          {/* <Link href={"/lk"}> */}
           <img height={"24"} src="/icons/user.svg" alt="user" />
         </Link>
-        <img height={"24"} src="/icons/moon.svg" alt="" onClick={toggleTheme} />
+        <img height={"24"} src="/icons/moon.svg" alt="" />
+        {/* <img height={"24"} src="/icons/moon.svg" alt="" onClick={toggleTheme} /> */}
       </div>
     </header>
   );

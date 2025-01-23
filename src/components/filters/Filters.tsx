@@ -29,13 +29,13 @@ const Filters: React.FC = ({}) => {
             Jeans <img src="/icons/arrow-right.svg" alt="" />
           </Link>
         </nav>
-        <div className={`horizontal-line ${styles.horizontalLine}`}></div>
+        {/* <div className={`horizontal-line ${styles.horizontalLine}`}></div>
         <div>
           <div className={`${styles.flexRow} ${styles.title}`}>
             <h2>Price</h2>
           </div>
-          {/* <RangeSlider /> */}
-        </div>
+          <RangeSlider /> 
+        </div> */}
         <div className={`horizontal-line ${styles.horizontalLine}`}></div>
         <div>
           <div className={`${styles.flexRow} ${styles.title}`}>
@@ -81,7 +81,7 @@ const Filters: React.FC = ({}) => {
           </div>
         </div>
         <div className={`horizontal-line ${styles.horizontalLine}`}></div>
-        <nav className={styles.filterNav}>
+        {/* <nav className={styles.filterNav}>
           <Link href="#" className={styles.flexRow}>
             T-shirts
             <img src="/icons/arrow-right.svg" alt="" />
@@ -102,7 +102,7 @@ const Filters: React.FC = ({}) => {
             T-shirts
             <img src="/icons/arrow-right.svg" alt="" />
           </Link>
-        </nav>
+        </nav> */}
         <div>
           <div className={`${styles.flexRow} ${styles.title}`}>
             <h2>Size</h2>

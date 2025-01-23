@@ -15,10 +15,12 @@
 }
 
 .title {
+  font-size: 1.25rem;
   margin-bottom: 8px;
 }
 
 .rating {
+  font-size: 0.875rem;
   width: 180px;
   display: flex;
   align-items: center;
@@ -29,7 +31,7 @@
 .price {
   color: var(--text-color);
   font-weight: 700;
-  font-size: clamp(20px, 2vw, 24px);
+  font-size: 1.25rem;
   display: inline;
   span {
     margin-right: 10px;
