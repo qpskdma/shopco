@@ -7,25 +7,25 @@ const Filters: React.FC = ({}) => {
       <div className={styles.wrapper}>
         <div className={styles.flexRow}>
           <h2>Filters</h2>
-          <img src="/icons/settings.svg" alt="settings" />
+          <img src="icons/settings.svg" alt="settings" />
         </div>
         <div className={`horizontal-line ${styles.horizontalLine}`}></div>
         <nav className={styles.filterNav}>
           <Link href="#" className={styles.flexRow}>
             T-shirts
-            <img src="/icons/arrow-right.svg" alt="" />
+            <img src="icons/arrow-right.svg" alt="" />
           </Link>
           <Link href="#" className={styles.flexRow}>
-            Shorts <img src="/icons/arrow-right.svg" alt="" />
+            Shorts <img src="icons/arrow-right.svg" alt="" />
           </Link>
           <Link href="#" className={styles.flexRow}>
-            Shirts <img src="/icons/arrow-right.svg" alt="" />
+            Shirts <img src="icons/arrow-right.svg" alt="" />
           </Link>
           <Link href="#" className={styles.flexRow}>
-            Hoodie <img src="/icons/arrow-right.svg" alt="" />
+            Hoodie <img src="icons/arrow-right.svg" alt="" />
           </Link>
           <Link href="#" className={styles.flexRow}>
-            Jeans <img src="/icons/arrow-right.svg" alt="" />
+            Jeans <img src="icons/arrow-right.svg" alt="" />
           </Link>
         </nav>
         {/* <div className={`horizontal-line ${styles.horizontalLine}`}></div>
@@ -82,29 +82,29 @@ const Filters: React.FC = ({}) => {
         {/* <nav className={styles.filterNav}>
           <Link href="#" className={styles.flexRow}>
             T-shirts
-            <img src="/icons/arrow-right.svg" alt="" />
+            <img src="icons/arrow-right.svg" alt="" />
           </Link>
           <Link href="#" className={styles.flexRow}>
             T-shirts
-            <img src="/icons/arrow-right.svg" alt="" />
+            <img src="icons/arrow-right.svg" alt="" />
           </Link>
           <Link href="#" className={styles.flexRow}>
             T-shirts
-            <img src="/icons/arrow-right.svg" alt="" />
+            <img src="icons/arrow-right.svg" alt="" />
           </Link>
           <Link href="#" className={styles.flexRow}>
             T-shirts
-            <img src="/icons/arrow-right.svg" alt="" />
+            <img src="icons/arrow-right.svg" alt="" />
           </Link>
           <Link href="#" className={styles.flexRow}>
             T-shirts
-            <img src="/icons/arrow-right.svg" alt="" />
+            <img src="icons/arrow-right.svg" alt="" />
           </Link>
         </nav> */}
         <div>
           <div className={`${styles.flexRow} ${styles.title}`}>
             <h2>Size</h2>
-            <img src="/icons/arrow-right.svg" alt="" />
+            <img src="icons/arrow-right.svg" alt="" />
           </div>
           <div className={styles.sizes}>
             <button className={styles.sizeBtn}>XX-Small</button>

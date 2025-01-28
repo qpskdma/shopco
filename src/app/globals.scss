@@ -264,6 +264,9 @@ h3 {
     --padding-side: 16px;
   }
 }
+a {
+  transition-duration: 0.25s;
+}
 
 a:hover {
   opacity: 0.5;

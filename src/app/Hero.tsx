@@ -28,9 +28,9 @@ const Hero: React.FC = ({}) => {
           </div>
         </div>
         <div className={styles.image__section}>
-          {/* <img className={styles.background} src="/images/models.jpg" alt="" /> */}
-          <img className={styles.first__star} src="/icons/star.svg" alt="" />
-          <img className={styles.second__star} src="/icons/star.svg" alt="" />
+          {/* <img className={styles.background} src="images/models.jpg" alt="" /> */}
+          <img className={styles.first__star} src="icons/star.svg" alt="" />
+          <img className={styles.second__star} src="icons/star.svg" alt="" />
         </div>
       </div>
 
@@ -38,31 +38,31 @@ const Hero: React.FC = ({}) => {
         <img
           className="icon"
           height={"33"}
-          src="/icons/versace.svg"
+          src="icons/versace.svg"
           alt="versace"
         />
         <img
           className="icon"
           height={"38"}
-          src="/icons/zara-logo.svg"
+          src="icons/zara-logo.svg"
           alt="zara"
         />
         <img
           className="icon"
           height={"36"}
-          src="/icons/gucci-logo.svg"
+          src="icons/gucci-logo.svg"
           alt="gucci"
         />
         <img
           className="icon"
           height={"32"}
-          src="/icons/prada-logo.svg"
+          src="icons/prada-logo.svg"
           alt="prada"
         />
         <img
           className="icon"
           height={"33"}
-          src="/icons/calvin-clein.svg"
+          src="icons/calvin-clein.svg"
           alt="calvin clein"
         />
       </div>

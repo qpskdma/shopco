@@ -6,19 +6,19 @@ const Browse: React.FC = ({}) => {
       <h3>BROWSE BY dress STYLE</h3>
       <div className={styles.dress__styles}>
         <div>
-          <img src="/images/casual-style.png" alt="" />
+          <img src="images/casual-style.png" alt="" />
           <p>Casual</p>
         </div>
         <div>
-          <img src="/images/formal-style.png" alt="" />
+          <img src="images/formal-style.png" alt="" />
           <p>Formal</p>
         </div>
         <div>
-          <img src="/images/party-style.png" alt="" />
+          <img src="images/party-style.png" alt="" />
           <p>Party</p>
         </div>
         <div>
-          <img src="/images/gym-style.png" alt="" />
+          <img src="images/gym-style.png" alt="" />
           <p>Gym</p>
         </div>
       </div>

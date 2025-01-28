@@ -7,7 +7,7 @@ const Footer: React.FC = ({}) => {
         <h2 className={styles.title}>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
         <form className={styles.form} action="post">
           <div className={`custom-input__wrapper ${styles.input}`}>
-            <img src="/icons/email.svg" alt="email" />
+            <img src="icons/email.svg" alt="email" />
             <input
               className="custom-input"
               type="email"
@@ -36,7 +36,7 @@ const Footer: React.FC = ({}) => {
                 <img
                   className="icon"
                   width={12}
-                  src="/icons/logo-twitter.svg"
+                  src="icons/logo-twitter.svg"
                   alt="twitter"
                 />
               </a>
@@ -46,7 +46,7 @@ const Footer: React.FC = ({}) => {
                 <img
                   className="icon"
                   height={12}
-                  src="/icons/logo-facebook.svg"
+                  src="icons/logo-facebook.svg"
                   alt="twitter"
                 />
               </a>
@@ -56,7 +56,7 @@ const Footer: React.FC = ({}) => {
                 <img
                   className="icon"
                   width={12}
-                  src="/icons/logo-inst.svg"
+                  src="icons/logo-inst.svg"
                   alt="twitter"
                 />
               </a>
@@ -66,7 +66,7 @@ const Footer: React.FC = ({}) => {
                 <img
                   className="icon"
                   width={12}
-                  src="/icons/logo-github.svg"
+                  src="icons/logo-github.svg"
                   alt="twitter"
                 />
               </a>

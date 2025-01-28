@@ -9,7 +9,7 @@ const Review: React.FC = ({}) => {
         Sarah M.
         {/* {review.author} */}
         {/* {review.isAuthorConfirmed ? (
-          <img src="/icons/confirm.svg" alt="confirmed account" />
+          <img src="icons/confirm.svg" alt="confirmed account" />
         ) : null} */}
       </p>
       <p className={styles.review__text}>

@@ -22,7 +22,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ item, isLoading }) => {
   return (
     <>
       <div className={styles.image__wrapper}>
-        <img src={`/images/${item?.image}`} alt="" />
+        <img src={`images/${item?.image}`} alt="" />
       </div>
       <h2 className={styles.title}>{item?.name}</h2>
       <div className={styles.rating}>

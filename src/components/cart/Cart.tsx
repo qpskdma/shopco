@@ -28,7 +28,7 @@ const Cart: React.FC = ({}) => {
             <div>$467</div>
           </div>
           <div className={`custom-input__wrapper ${styles.search}`}>
-            <img width={23} src="/icons/loupe.svg" alt="loupe" />
+            <img width={23} src="icons/loupe.svg" alt="loupe" />
             <input
               className="custom-input"
               type="text"
