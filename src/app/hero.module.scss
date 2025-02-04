@@ -104,5 +104,11 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 632px) {
+  .wrapper {
+    padding: 0 5px;
+  }
+  .text__section {
+    width: auto;
+  }
 }
