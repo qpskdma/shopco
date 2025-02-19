@@ -1,14 +1,23 @@
 .wrapper {
   position: relative;
-  background: url(../../public/images/models.png);
   background-color: var(--background-gray);
-  background-position: center;
-  background-repeat: no-repeat;
   height: 663px;
   padding: 0 var(--padding-side);
   display: flex;
   flex-direction: row;
-  color: black;
+  color: var(--text-color);
+}
+
+.wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../../public/images/models-Photoroom.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: -10px center;
+  transform: scale(1.13);
 }
 
 .text__section {
@@ -19,7 +28,7 @@
   h3 {
     font-family: "Integral CF";
     font-size: 64px;
-    color: black;
+    color: var(--text-color);
     line-height: 100%;
     margin-top: 103px;
   }
@@ -95,7 +104,7 @@
     }
   }
   .image__section {
-    background: url(../../public/images/models.jpg);
+    background: url(../../public/images/models.png);
     background-position: center;
     background-size: cover;
   }

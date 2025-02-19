@@ -3,8 +3,8 @@ import { Product } from "@/services/types";
 import styles from "./Arrivals.module.scss";
 import { useEffect, useState } from "react";
 import { getProducts } from "@/services/firebase";
-import ProductItem from "../productItem/ProductItem";
 import Link from "next/link";
+import ProductCard from "@/components/productcard/ProductCard";
 
 const Arrivals: React.FC = ({}) => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -81,14 +81,14 @@ const Arrivals: React.FC = ({}) => {
               (item: Product, index: number) => {
                 return (
                   <div className={styles.item} key={index}>
-                    <ProductItem item={item} isLoading={false} />
+                    <ProductCard item={item} isLoading={false} />
                   </div>
                 );
               }
             )
           ) : (
             <div className={styles.item}>
-              <ProductItem isLoading={true} />
+              <ProductCard isLoading={true} />
             </div>
           )}
         </div>

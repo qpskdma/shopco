@@ -1,13 +1,13 @@
 import { Product } from "@/services/types";
-import styles from "./ProductItem.module.scss";
+import styles from "./ProductCard.module.scss";
 import Rating from "../reviews/Rating";
 
-interface ProductItemProps {
+interface ProductCardProps {
   item?: Product;
   isLoading: boolean;
 }
 
-const ProductItem: React.FC<ProductItemProps> = ({ item, isLoading }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ item, isLoading }) => {
   if (isLoading) {
     return (
       <div className={styles.skeleton}>
@@ -44,4 +44,4 @@ const ProductItem: React.FC<ProductItemProps> = ({ item, isLoading }) => {
   );
 };
 
-export default ProductItem;
+export default ProductCard;

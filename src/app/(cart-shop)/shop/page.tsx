@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { getNewArrivalProducts, getOnSaleProducts } from "@/services/firebase";
 import { Product } from "@/services/types";
-import ProductItem from "@/components/productItem/ProductItem";
 import styles from "./page.module.scss";
+import Link from "next/link";
+import ProductCard from "@/components/productcard/ProductCard";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -35,13 +36,15 @@ const ProductsPage = () => {
           products.map((item: Product, index: number) => {
             return (
               <div className={styles.item} key={index}>
-                <ProductItem item={item} isLoading={false} />
+                <Link href={`/product/${item.id}`}>
+                  <ProductCard item={item} isLoading={false} />
+                </Link>
               </div>
             );
           })
         ) : (
           <div className={`${styles.item} ${styles.overflow}`}>
-            <ProductItem isLoading={true} />
+            <ProductCard isLoading={true} />
           </div>
         )}
       </div>

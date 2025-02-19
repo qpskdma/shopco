@@ -3,7 +3,7 @@ import styles from "./hero.module.scss";
 const Hero: React.FC = ({}) => {
   return (
     <>
-      <div className={styles.wrapper}>
+      <section className={styles.wrapper}>
         <div className={styles.text__section}>
           <h3>FIND CLOTHES THAT MATCHES YOUR STYLE</h3>
           <p>
@@ -32,9 +32,9 @@ const Hero: React.FC = ({}) => {
           <img className={styles.first__star} src="icons/star.svg" alt="" />
           <img className={styles.second__star} src="icons/star.svg" alt="" />
         </div>
-      </div>
+      </section>
 
-      <div className={styles.partners}>
+      <section className={styles.partners}>
         <img
           className="icon"
           height={"33"}
@@ -65,7 +65,7 @@ const Hero: React.FC = ({}) => {
           src="icons/calvin-clein.svg"
           alt="calvin clein"
         />
-      </div>
+      </section>
     </>
   );
 };
