@@ -8,7 +8,7 @@
   // position: fixed;
   // transition: transform 0.3s ease-in-out;
   top: 0;
-  z-index: 100000;
+  z-index: 100;
   background-color: var(--background-color);
 }
 
@@ -55,14 +55,14 @@
 .search {
   width: 577px;
   min-width: 212px;
-  background-color: var(--background-gray);
+  background-color: var(--background-input);
   display: flex;
   justify-content: right;
   img {
     opacity: 0.4;
   }
   input {
-    background-color: var(--background-gray);
+    background-color: var(--background-input);
   }
 }
 
@@ -87,6 +87,12 @@
 
 .hidden {
   transform: translateY(-100%);
+}
+
+.theme__btn {
+  background: none;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1050px) {

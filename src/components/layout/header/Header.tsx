@@ -92,8 +92,13 @@ const Header: React.FC = ({}) => {
         <Link href={"/lk"}>
           <img height={"24"} src="icons/user.svg" alt="user" />
         </Link>
-        {/* <img height={"24"} src="icons/moon.svg" alt="" /> */}
-        <img height={"24"} src="icons/moon.svg" alt="" onClick={toggleTheme} />
+        <button className={styles.theme__btn} onClick={toggleTheme}>
+          {theme === "light" ? (
+            <img height={"24"} src="icons/moon.svg" alt="" />
+          ) : (
+            <img height={"24"} src="icons/sun.svg" alt="" />
+          )}
+        </button>
       </div>
     </header>
   );

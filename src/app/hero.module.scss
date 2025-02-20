@@ -16,8 +16,8 @@
   background: url(../../public/images/models-Photoroom.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-position: -10px center;
-  transform: scale(1.13);
+  background-position: -70px center;
+  zoom: 1.13;
 }
 
 .text__section {
@@ -91,7 +91,6 @@
     flex-direction: column;
     padding: 0 4.1%;
     height: 853px;
-    background: var(--background-gray);
   }
   .text__section {
     row-gap: 20px;

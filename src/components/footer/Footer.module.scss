@@ -1,9 +1,9 @@
 .footer {
-  height: 489px;
+  height: auto;
   position: relative;
   margin-top: 170px;
   background-color: var(--background-gray-2);
-  padding: 140px var(--padding-side) 0px;
+  padding: 140px var(--padding-side) 50px;
 }
 
 .info {
@@ -29,7 +29,7 @@
   .title {
     color: var(--background-color);
     font-family: "Integral CF";
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 100%;
   }
   .form {
@@ -81,6 +81,7 @@
 }
 
 .section {
+  height: auto;
   h2 {
     font-size: 1rem;
     font-weight: 500;
@@ -103,12 +104,12 @@
   margin-top: 5px;
 }
 
-@media (max-width: 1044px) {
+@media (max-width: 1000px) {
   .contactFormWrapper {
     flex-direction: column;
     row-gap: 32px;
   }
-  .form {
+  .contactFormWrapper > .form {
     justify-content: center;
     align-items: center;
   }
@@ -116,7 +117,8 @@
     justify-content: center;
   }
   .footer {
-    margin-top: 185px;
+    padding-top: 190px;
+    height: auto;
   }
 }
 
@@ -132,35 +134,27 @@
     margin-bottom: 11px;
   }
 
-  .footer {
-    padding-top: 190px;
-  }
-
   .info {
+    height: auto;
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "main"
-      "other1 other2"
-      "other3 other4";
   }
 
   .mainInfo {
-    grid-area: main;
+    grid-column: span 2;
+    margin-bottom: 20px;
+    .description {
+      margin-bottom: 10px;
+    }
   }
+}
 
-  .section:nth-child(2) {
-    grid-area: other2;
+@media (max-width: 450px) {
+  .footer {
+    padding-top: 230px;
   }
-
-  .section:nth-child(3) {
-    grid-area: other3;
-  }
-
-  .section:nth-child(4) {
-    grid-area: other4;
-  }
-
-  .section:nth-child(5) {
-    grid-area: other5;
+  .input,
+  .form button {
+    width: auto;
+    max-width: 280px;
   }
 }
