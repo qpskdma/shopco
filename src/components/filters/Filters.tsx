@@ -7,7 +7,11 @@ const Filters: React.FC = ({}) => {
       <div className={styles.wrapper}>
         <div className={styles.flexRow}>
           <h2>Filters</h2>
-          <img src="icons/settings.svg" alt="settings" />
+          <img
+            className={styles.settings}
+            src="icons/settings.svg"
+            alt="settings"
+          />
         </div>
         <div className={`horizontal-line ${styles.horizontalLine}`}></div>
         <nav className={styles.filterNav}>
@@ -28,12 +32,6 @@ const Filters: React.FC = ({}) => {
             Jeans <img src="icons/arrow-right.svg" alt="" />
           </Link>
         </nav>
-        {/* <div className={`horizontal-line ${styles.horizontalLine}`}></div>
-        <div>
-          <div className={`${styles.flexRow} ${styles.title}`}>
-            <h2>Price</h2>
-          </div>
-        </div> */}
         <div className={`horizontal-line ${styles.horizontalLine}`}></div>
         <div>
           <div className={`${styles.flexRow} ${styles.title}`}>

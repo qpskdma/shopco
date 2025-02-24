@@ -145,6 +145,38 @@ export const getNewArrivalProducts = async (): Promise<Product[]> => {
     return [];
   }
 };
+export const getBrands = async (): Promise<Product[]> => {
+  try {
+    const productsCollection = collection(db, "brands");
+    const productsSnapshot = await getDocs(productsCollection);
+    const productsList: Product[] = [];
+
+    productsSnapshot.forEach((doc) => {
+      const data = doc.data();
+      if (data) {
+        productsList.push({
+          id: data.id,
+          name: data.name,
+          category: data.category,
+          colors: data.colors,
+          sizes: data.sizes,
+          rating: data.rating,
+          price: data.price,
+          image: data.image,
+          newArrival: data.newArrival,
+          topSelling: data.topSelling,
+          sale: data.sale,
+          oldPrice: data.oldPrice,
+        } as Product);
+      }
+    });
+
+    return productsList;
+  } catch (error) {
+    console.error("Error getting documents:", error);
+    return [];
+  }
+};
 
 // // Функция для добавления отзыва
 // export async function addReview(review: Object) {

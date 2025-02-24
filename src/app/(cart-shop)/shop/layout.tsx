@@ -15,7 +15,7 @@ export default function RootLayout({
   const crumbs = [
     { label: "Home", href: "/" },
     {
-      label: category === "onSale" ? "On Sale" : "New Arrivals",
+      label: category ? category : "All",
       href: `/products?category=${category}`,
     },
   ];

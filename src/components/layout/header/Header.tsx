@@ -70,7 +70,7 @@ const Header: React.FC = ({}) => {
           </Link>
         </li>
         <li>
-          <Link className="link" href="#">
+          <Link className="link" href="/shop?category=Brands">
             Brands
           </Link>
         </li>

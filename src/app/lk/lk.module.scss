@@ -1,8 +1,11 @@
 .container {
+  display: flex;
+  gap: 24px;
   padding: 0 var(--padding-side);
 }
+
 .wrapper {
-  width: 20vw;
+  width: 30vw;
   height: auto;
   background-color: var(--gray-second);
   border-radius: 12px;
@@ -10,4 +13,77 @@
   display: flex;
   flex-direction: column;
   row-gap: 8px;
+}
+
+.wrapper__second {
+  display: flex;
+}
+
+.profile__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.avatar__wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.input {
+  margin: 0 12px;
+}
+
+// Second Section
+
+.wrapper__second {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+}
+
+.box {
+  flex-grow: 1;
+  height: 105px;
+  background-color: var(--gray-second);
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  &.favorites::after {
+    content: url("../../../public/icons/favorites.svg");
+  }
+  &.purch::after {
+    content: url("../../../public/icons/purch.svg");
+  }
+  &.feedback::after {
+    content: url("../../../public/icons/rating.svg");
+  }
+  &::after {
+    width: 32px;
+    height: 32px;
+    transition: all 0.3sease-in-out;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 1260px) {
+  .wrapper__second {
+    flex-direction: column;
+  }
 }

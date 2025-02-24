@@ -37,6 +37,17 @@
   h2 {
     font-size: 1.25rem;
   }
+  img {
+    transition: transform ease-in 0.2s;
+  }
+  &:hover {
+    img {
+      transform: translateX(50%);
+    }
+    .settings {
+      transform: none;
+    }
+  }
 }
 
 .title {
@@ -53,15 +64,15 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
-  // flex-wrap: wrap;
-  // column-gap: 15.5px;
-  // row-gap: 16px;
 }
 
 .colorBtn {
   width: 37px;
   height: 37px;
   border-radius: 50%;
+  &:hover {
+    border: 2px solid var(--accent);
+  }
 }
 
 .white {
